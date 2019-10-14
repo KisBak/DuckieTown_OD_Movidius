@@ -1,0 +1,63 @@
+\documentclass{article}
+
+% to compile a camera-ready version, add the [final] option, e.g.:
+     \usepackage[final]{neurips_2019}
+
+\usepackage[utf8]{inputenc} % allow utf-8 input
+\usepackage[T1]{fontenc}    % use 8-bit T1 fonts
+\usepackage{hyperref}       % hyperlinks
+\usepackage{url}            % simple URL typesetting
+\usepackage{booktabs}       % professional-quality tables
+\usepackage{amsfonts}       % blackboard math symbols
+\usepackage{nicefrac}       % compact symbols for 1/2, etc.
+\usepackage{microtype}      % microtypography
+\usepackage{graphicx}
+\graphicspath{{.\images}}
+
+
+\title{Object detection based DuckieTown agent on INTEL Movidius Neural Compute Stick \\
+	\large Objektum felismerést megvalósító DuckieTown ágens INTEL Movidius eszközön}
+
+% The \author macro works with any number of authors. There are two commands
+% used to separate the names and addresses of multiple authors: \And and \AND.
+%
+% Using \And between authors leaves it to LaTeX to determine where to break the
+% lines. Using \AND forces a line break at that point. So, if LaTeX puts 3 of 4
+% authors names on the first line, and the last on the second line, try using
+% \AND instead of \And before the third author name.
+
+\author{ \\
+Antal Balázs\\ a.balat1993@gmail.com
+\and \\
+Wippelhauser András\\ wandris1210@gmail.com
+\and \\
+Meleg Eszter\\ eszto.mg@gmail.com\\
+\\
+Faculty of Electrical Engineering and Informatics\\
+Budapest University of Technology and Economics\\
+}
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+In 2016 DuckieTown started as a class at MIT with the goal to introduce students into the field of artificial intelligence and robotics. Since then the project has grown into a worldwide initiative to realize a new vision for AI/robotics education by supporting innovative solutions. Our main goal with this project is to implement an object detection network based on the guidence of the original course material and enhance its performance with a dedicated hardware accelerator for deep neural network inferences. The greatest challenges during the process are considered to be the difficulities rooted in the diversity of the environments which we attept to solve as best we can. During the implementation we are seeking to apply as optimal solutions as possible while trying to obtain new and useful experiences for our further studies. The following document offers an insight of our work, including the obstacles we faced with and the results we reached. 
+\end{abstract}
+
+\begin{abstract}
+
+2016-ban a DuckieTown egy az MIT által szervezett kurzusként indult azzal a céllal, hogy bevezesse a tanulókat a mesterséges intelligencia és a robotika világába. Azóta a projekt egy világméretű kezdeményezéssé nőtte ki magát annak érdekében, hogy új szemléletet alakítson ki az AI és a robotikai oktatás terén az innovatív módszerek támogatásával. Az eredeti kurzus útmutatását alapul véve a fő célunk ebben a projektben egy olyan objektum detektáló neurális háló elkészítése, melynek teljesítményét egy mély neurális hálók predikcióihoz alkalmazott, dedikált hardware alapú gyorsítóeszköz növeli. A legnagyobb kihívást a megvalósítás során a környezetek sokszínűségéből adódó nehézségek jelenthetik, melyekre igyekszünk legjobb tudásunk szerint megoldást találni. Az implementáció során arra törekszünk, hogy a lehető legoptimálisabb megoldásokat alkalmazzuk miközben igyekszünk új és hasznos tapasztalatokat szerezni további tanulmányainkhoz. Az alábbi dokumentum  betekintést nyújt a munkánkba, beleértve a nehézségeket amikkel szembenéztünk valamint az elért eredményeket. 
+\end{abstract}
+
+\section{Introduction}
+The following project is made as a team work assignment for the class Deep Learning in Practice with Python and LUA, autumn semester 2019. Our choice was the implementing of a DuckieTown agent which is able to detect specific objects in a well determined environment and uses an edge based accelerator for faster decision making progress. 
+Our baseline was the excercise of the official Duckietown project documentation Unit B-5, which gives a YOLO based convolutional network as a solution of the problem.  
+
+\subsection{Field and previous solutions}
+The study made on our baselin suggests the network achieved a 70 percent average IOU during validation and demonstrates real-time detection of close objects on unseen data. (link)  
+
+\section{Datasets}
+The datasets being used in the project are the precleaned, labelled pictures from the original DuckieTown repository. Each picture has a text file too which contains the parameters of the objects being depicted. This way by merging the visional and text data we get the annotated pictures for training.
+
+
+\end{document}
