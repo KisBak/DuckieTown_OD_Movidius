@@ -27,3 +27,14 @@ TODO: COLAB! Introduce usage for everyone! - URGENTLY
 ### Testing:
 
 TODO : https://github.com/duckietown/docs-exercises/blob/master/book/exercises/100_exercise_train_object_detector.md
+
+### Documentation
+
+We used the attached template LaTeX file. The docs can be found under the __docs__ folder. The compilation can be made using the following method.
+
+```bash
+cd docs
+docker run -v `pwd`:/home -it tianon/latex
+cd /home
+pdflatex DuckTales_assignment.tex
+```
