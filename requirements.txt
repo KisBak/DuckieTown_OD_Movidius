@@ -1,2 +1,0 @@
-Augmentor==0.2.6
-Keras==2.3.1

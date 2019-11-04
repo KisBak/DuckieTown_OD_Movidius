@@ -1,1 +1,3 @@
-venv/
+src/duckie_train.pkl
+src/duckie_valid.pkl
+src/.venv
